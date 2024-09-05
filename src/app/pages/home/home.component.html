@@ -1,0 +1,17 @@
+<app-layout>
+  <p>Olá!</p>
+
+  <div *ngIf="user">
+    <h1>Bem-vindo, {{ user.username }}</h1>
+    <p>Email: {{ user.email }}</p>
+  </div>
+
+  <div class="flex-column my-2">
+    <p-button
+      icon="pi pi-sign-out"
+      label="Sair"
+      (click)="logout()"
+      (keydown.enter)="logout()"
+    ></p-button>
+  </div>
+</app-layout>

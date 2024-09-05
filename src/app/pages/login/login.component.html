@@ -1,0 +1,46 @@
+<app-layout>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="signIn()">
+      <div class="flex">
+        <div class="flex-column m-2">
+          <p-floatLabel>
+            <input
+              pInputText
+              type="text"
+              id="username"
+              name="username"
+              [(ngModel)]="username"
+              required
+              autocomplete="off"
+            />
+            <label for="username">Usuário</label>
+          </p-floatLabel>
+        </div>
+
+        <div class="flex-column m-2">
+          <p-floatLabel>
+            <input
+              pInputText
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+              autocomplete="off"
+            />
+            <label for="password">Senha</label>
+          </p-floatLabel>
+        </div>
+
+        <div class="flex-column m-2">
+          <p-button
+            type="submit"
+            icon="pi pi-sign-in"
+            label="Entrar"
+          ></p-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</app-layout>
