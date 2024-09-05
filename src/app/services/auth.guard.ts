@@ -3,7 +3,7 @@ import { CanActivate, Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { UserState } from 'app/store/models/auth.model';
+import { UserState } from 'app/store/models/user-state.model';
 
 @Injectable({
   providedIn: 'root',

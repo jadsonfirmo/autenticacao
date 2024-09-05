@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { loginSuccess, logout } from 'app/store/actions/user.actions';
-import { UserState } from 'app/store/models/auth.model';
+import { UserState } from 'app/store/models/user-state.model';
 
 const initialState: UserState = {
   isAuthenticated: false,

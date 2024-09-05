@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { User } from 'app/store/models/user.model';
 import { Store } from '@ngrx/store';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { loginSuccess } from 'app/store/actions/user.actions';
 
 @Component({
@@ -21,6 +21,7 @@ import { loginSuccess } from 'app/store/actions/user.actions';
     ButtonModule,
     InputTextModule,
     FloatLabelModule,
+    RouterModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
@@ -34,14 +35,14 @@ export class LoginComponent {
   async signIn() {
     try {
       const userData: User = {
-        username: 'jadson',
-        email: 'jadson@email.com',
+        username: this.username,
+        email: this.username + '@email.com',
         token: 'mock-jwt-token',
       };
 
       this.store.dispatch(loginSuccess({ user: userData }));
 
-      console.log('Login bem-sucedido:', userData);
+      console.log('Login bem-sucedido!');
 
       this.router.navigate(['/home']);
     } catch (error) {

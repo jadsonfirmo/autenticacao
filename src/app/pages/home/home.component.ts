@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import { LayoutComponent } from 'app/components/layout/layout.component';
 import { logout } from 'app/store/actions/user.actions';
-import { UserState } from 'app/store/models/auth.model';
+import { UserState } from 'app/store/models/user-state.model';
 import { User } from 'app/store/models/user.model';
 import { ButtonModule } from 'primeng/button';
 import { Observable } from 'rxjs';
